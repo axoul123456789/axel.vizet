@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow"
         Height="450"
-        Width="800">
+        Width="500">
 
-    <Grid>
+    <Grid Background="LightGray">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -19,7 +19,9 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
+
             <RowDefinition Height="90" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -29,21 +31,27 @@
         <Grid.Resources>
 
             <Style TargetType="{x:Type Button}">
-                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Margin" Value="5"/>
                 <Setter Property="Background" Value="Blue"/>
-                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="FontSize" Value="40"/>
 
                 <Style.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="40"/>
+                        <Setter Property="CornerRadius" Value="25"/>
                     </Style>
                 </Style.Resources>
             </Style>
 
             <Style x:Key="MyStyle" TargetType="{x:Type Control}">
-                <Setter Property="Margin" Value="10"/>
-                <Setter Property="Background" Value="DarkBlue"/>
-                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Background" Value="red"/>
+                <Setter Property="FontSize" Value="40"/>
+                
+                  <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Style.Resources>
             </Style>
 
         </Grid.Resources>
@@ -151,10 +159,20 @@
                 Click="BTN_egale_Click"/>
 
         <Button Grid.Row="4"
-                Grid.Column="3"
+                Grid.Column="3" Background="red"
                 Name="BTN_DIV"
                 Content="/"
                 Click="BTN_DIV_Click"/>
+
+        <Button Grid.Row="5"
+                Grid.Column="3" Background="GreenYellow"
+                Name="Btn_sin"
+                Content="sin" Click="Btn_sin_Click"/>
+
+        <Button Grid.Row="5"
+                Grid.Column="2" Background="GreenYellow"
+                Name="Btn_cos"
+                Content="cos" Click="Btn_cos_Click"/>
 
     </Grid>
 </Window>

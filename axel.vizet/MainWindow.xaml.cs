@@ -12,6 +12,8 @@ namespace axel.vizet
 
         string operation = "";
 
+        double resultat = 0;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -155,7 +157,7 @@ namespace axel.vizet
         private void BTN_egale_Click(object sender, RoutedEventArgs e)
         {
             double deuxiemeNombre = Convert.ToDouble(TB_Display.Text);
-            double resultat = 0;
+         
 
             if (operation == "+")
             {
@@ -179,5 +181,16 @@ namespace axel.vizet
 
             TB_Display.Text = resultat.ToString();
         }
+
+        private void Btn_sin_Click(object sender, RoutedEventArgs e)
+        {
+            resultat = Math.Sin(Convert.ToDouble(TB_Display.Text));
+        }
+         
+        private void Btn_cos_Click(object sender, RoutedEventArgs e)
+        {
+            resultat = Math.Cos(Convert.ToDouble(TB_Display.Text));
+        }
+           
+        }
     }
-}
