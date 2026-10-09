@@ -180,6 +180,7 @@ namespace axel.vizet
             }
 
             TB_Display.Text = resultat.ToString();
+            //test git frdytgedr
         }
 
         private void Btn_sin_Click(object sender, RoutedEventArgs e)
